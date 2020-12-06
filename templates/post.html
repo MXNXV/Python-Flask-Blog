@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block body %}
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{{url_for('static',filename='images/loading.gif')}}" alt="" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-3 logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo"> <a href="/"><img src="  {{url_for('static',filename='images/footer.jpg')}}  " alt="#"></a> </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-9">
+                  <div class="menu-area">
+                     <div class="limit-box">
+                        <nav class="main-menu">
+                           <ul class="menu-area-main">
+                              <li class="active">
+                                 <a href="/">Home</a>
+                              </li>
+                              <li>
+                                 <a href="/about">About</a>
+                              </li>
+                              <li>
+                                 <a href='/post/first-post'>Posts</a>
+                              </li>
+                              
+                              <li>
+                                 <a href="/contact">Contact us</a>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+      </header>
+      <!-- end header -->
+      <div class="Marketing-bg">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="Marketingheading">
+               <h3>Posts</h3>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+      <!-- section --> 
+      {% for post in posts %} 
+      {% set fname = 'images/'+ post.img_file %}
+      <div class="section layout_padding dark_bg">
+         <div class="container">
+            <!--ToDo : Add a for loop foa addding more posts-->
+               <li><a href="/post/{{ post.slug }}">{{ post.Title }}</a></li>
+            
+            <div class="row">
+               <div class="col-md-6">
+                  <br><br><br><br>
+                  <img src="{{url_for('static',filename=fname)}}" alt="#" />
+               </div>
+               <div class="col-md-6">
+                  <div class="full blog_cont">
+                     <h3 class="white_font">{{post.Title}}</h3>
+                     <h5 class="grey_font">{{post.Date}}</h5>
+                     <p class="white_font">{{post.Content}}</p>
+                  </div>
+               </div>
+            </div>
+         {% endfor %}
+            
+            </div>
+         </div>
+      </div>
+      <!-- end section -->
+
+       
+      
+      <!-- footer -->
+   </body>
+   {% endblock %}  

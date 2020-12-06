@@ -1,0 +1,19 @@
+{
+    "params":
+        {
+            "local_server":"True",
+            "local_uri":"mysql://root:@localhost/manav's blog",
+            "prod_uri":"mysql://root:@localhost/manav's blog",
+
+            "git_url":"https://github.com/MXNXV",
+            "link_url":"https://www.linkedin.com/in/manav-mandal-5b1496196/",
+            "blog_name":"Syntax Error",
+            "sub_head":"A blog created from the ground up",
+            "gmail_user":"manavmandalpune@gmail.com",
+            "gmail_password":"Mandal@2001",
+            "no_of_posts":2,
+            "admin_username":"mxnxv@syntaxerror",
+            "admin_password":"admin",
+            "upload_loc":"E:\\Website Project\\static\\images"
+        }
+}

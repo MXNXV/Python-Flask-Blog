@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>{{params['blog_name']}}</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+      <!-- fevicon -->
+      <link rel="icon" href="  {{url_for('static',filename='images/fevicon.png')}}  " type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.mCustomScrollbar.min.css')}}">
+      <!-- Tweaks for older IEs-->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+
+
+   {% block body %} {% endblock %}
+
+
+   <footer>
+    <div class="container">
+       <div class="row">
+          <div class="col-lg-4 col-md-6">
+             <a href="#"><img src="  {{url_for('static',filename='images/footer.jpg')}}  " alt="#" /></a>
+             <ul class="contact_information">
+                <li><span><img src="{{url_for('static',filename='images/location_icon.png')}}" alt="#" /></span><span class="text_cont">Pune<br>Maharashtra</span></li>
+                <li><span><img src="{{url_for('static',filename='images/phone_icon.png')}}" alt="#" /></span><span class="text_cont">987 654 3210<br>987 654 3210</span></li>
+                <li><span><img src="{{url_for('static',filename='images/mail_icon.png')}}" alt="#" /></span><span class="text_cont">manavmandalpune@gmail.com<br>support@gmail.com</span></li>
+             </ul>
+             <ul class="social_icon">
+                <li><a href="{{params['git_url']}}"><i class="fa fa-github"></i></a></li>
+                
+                <li><a href="{{params['link_url']}}"><i class="fa fa-linkedin"></i></a></li>
+                
+             </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+             <div class="footer_links">
+                <h3>Quick link</h3>
+                <ul>
+                   <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                   <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Posts</a></li>
+                   <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Contact Us</a></li>
+                </ul>
+             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+             <div class="footer_links">
+                <h3 style="color:white;">Join Us on Instagram</h3>
+                <ol>
+                   <li><a href='https://www.instagram.com/___mxnxv___/'><img src="{{url_for('static',filename='images/insta_logo.png')}}" alt="#" /></a>
+                </ol>
+             </div>
+          </div>
+         
+       </div>
+    </div>
+ </footer>
+ <div class="cpy">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <p>Copyright © 2019 Design by <a href="https://html.design/">Manav Mandal</a></p>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- end footer -->
+ <!-- Javascript files-->
+ <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+ <script src="{{url_for('static',filename='js/popper.min.js')}}"></script>
+ <script src="{{url_for('static',filename='js/bootstrap.bundle.min.js')}}"></script>
+ <script src="{{url_for('static',filename='js/jquery-3.0.0.min.js')}}"></script>
+ <script src="{{url_for('static',filename='js/plugin.js')}}"></script>
+ <!-- Scrollbar Js Files -->
+ <script src="{{url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+ <script src="{{url_for('static',filename='js/custom.js')}}"></script>
+
+</html>

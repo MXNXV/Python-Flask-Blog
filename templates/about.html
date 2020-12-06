@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block body %}
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{{url_for('static',filename='images/loading.gif')}}" alt="" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-3 logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo"> <a href="/"><img src="  {{url_for('static',filename='images/footer.jpg')}}  " alt="#"></a> </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-9">
+                  <div class="menu-area">
+                     <div class="limit-box">
+                        <nav class="main-menu">
+                           <ul class="menu-area-main">
+                              <li class="active">
+                                 <a href="/">Home</a>
+                              </li>
+                              <li>
+                                 <a href="/about">About</a>
+                              </li>
+                              <li>
+                                 <a href="/post/first-post">Posts</a>
+                              </li>
+                              
+                              <li>
+                                 <a href="/contact">Contact us</a>
+                              </li>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+      </header>
+      <!-- end header -->
+     
+      <!-- section --> 
+<div class="About-bg">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="aboutheading">
+               <h3>About <span class="orange_color">Me</span></h3>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+      <div class="section layout_padding">
+         <div class="container">
+           
+            <div class="row">
+               <div class="col-md-6">
+                  <img src="{{url_for('static',filename='images/admin.jpg')}}" alt="#" />
+               </div>
+               <!--ToDo : Add a for loop foa addding more posts-->
+               <div class="col-md-6">
+                  <div class="full blog_cont">
+                     <h4>Manav Mandal</h4>
+                     <h5></h5>
+                     <p> Okay so basically I've created this website because my resume had a lot of blank spaces<br> Let me know if you like this blog <br> You can reach me using the contact tab above or using my details given below</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section -->
+     
+   </body>
+   {% endblock %}  
